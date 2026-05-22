@@ -38,34 +38,56 @@ export default function HeroSection() {
                         style={{ y: yBg, opacity: opacityVal }}
                         className="absolute top-1/4 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full bg-gradient-to-tr from-indigo-500/10 to-purple-500/5 blur-[120px] pointer-events-none"
                     />
-                    {/* Massive Kinetic Typography */}
-                    <div className="my-auto">
-                        <motion.h1
-                            variants={titleVariants}
-                            initial="hidden"
-                            animate="visible"
-                            style={{ y: yText }}
-                            className="text-[12vw] md:text-[10vw] font-black tracking-tighter leading-none flex overflow-hidden py-4"
-                        >
-                            {title.split("").map((letter, i) => (
-                                <motion.span
-                                    key={i}
-                                    variants={letterVariants}
-                                    className="inline-block hover:text-indigo-400 transition-colors duration-300"
-                                >
-                                    {letter === " " ? "\u00A0" : letter}
-                                </motion.span>
-                            ))}
-                        </motion.h1>
+                    {/* Hero Content */}
+                    <div className="my-auto grid grid-cols-1 items-center gap-12 md:grid-cols-2">
 
-                        <motion.p
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="mt-4 max-w-2xl text-xs font-medium uppercase leading-relaxed tracking-[0.4em] text-[var(--theme-text-muted)] md:text-sm"
+                        {/* LEFT CONTENT */}
+                        <div>
+                            <motion.h1
+                                variants={titleVariants}
+                                initial="hidden"
+                                animate="visible"
+                                style={{ y: yText }}
+                                className="text-[14vw] md:text-[6vw] font-black tracking-tight leading-none flex overflow-hidden py-4"
+                            >
+                                {title.split("").map((letter, i) => (
+                                    <motion.span
+                                        key={i}
+                                        variants={letterVariants}
+                                        className="inline-block hover:text-indigo-400 transition-colors duration-300"
+                                    >
+                                        {letter === " " ? "\u00A0" : letter}
+                                    </motion.span>
+                                ))}
+                            </motion.h1>
+
+                            <motion.p
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                                className="mt-4 max-w-md text-[10px] md:text-xs font-medium uppercase leading-relaxed tracking-[0.3em] text-[var(--theme-text-muted)]"
+                            >
+                                {subtitle}
+                            </motion.p>
+                        </div>
+
+                        {/* RIGHT SPLINE atau image
+                        */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1.2, delay: 0.5 }}
+                            className="relative flex h-[320px] w-full items-center justify-center md:h-[500px]"
                         >
-                            {subtitle}
-                        </motion.p>
+                            {/* <div className="h-full w-full overflow-hidden rounded-3xl">
+                                <iframe
+                                    src="https://my.spline.design/holoblobs-ycjs4ahNS8TYhVVYdznCwAXQ/"
+                                    width="100%"
+                                    height="100%"
+                                    className="scale-110"
+                                />
+                            </div> */}
+                        </motion.div>
                     </div>
 
                     {/* Bottom layout metadata */}

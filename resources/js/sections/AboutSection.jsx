@@ -21,8 +21,8 @@ function RevealWord({ word, progress, index, total }) {
 }
 
 export default function AboutSection() {
-    const text = `Saya fokus pada membangun antarmuka yang bersih, responsif, dan memiliki pengalaman pengguna yang solid. Setiap detail pada front-end saya rancang dengan mempertimbangkan keseimbangan antara estetika, performa, dan kemudahan penggunaan.
-Saya terbiasa bekerja dengan pendekatan yang terstruktur, mengutamakan komponen yang reusable, serta memastikan setiap elemen UI berjalan konsisten di berbagai perangkat.`;
+    const text = `Setiap detail pada front-end dirancang dengan mempertimbangkan keseimbangan antara estetika, performa, dan kemudahan penggunaan.
+berfokus pada pendekatan yang terstruktur, mengutamakan komponen yang reusable, serta memastikan setiap elemen UI berjalan konsisten di berbagai perangkat.`;
     const words = text.split(" ");
 
     return (
