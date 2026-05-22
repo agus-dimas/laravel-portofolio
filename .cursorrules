@@ -1,0 +1,129 @@
+# PROJECT ARCHITECTURE RULES
+
+This project is React-first architecture.
+
+Laravel is used only for:
+- API
+- Authentication
+- Database
+- Backend logic
+
+React JSX must handle:
+- Landing pages
+- Frontend UI
+- Interactive sections
+- Animations
+- Page transitions
+- Dynamic rendering
+
+Avoid generating Blade UI unless explicitly requested.
+
+---
+
+# FRONTEND RULES
+
+Use:
+- React JSX
+- TailwindCSS
+- Framer Motion
+- Component-based architecture
+- Reusable UI sections
+
+Prefer:
+- motion.div
+- React hooks
+- modular components
+- clean responsive layouts
+
+Frontend folder structure:
+resources/js/
+ ├── components/
+ ├── pages/
+ ├── layouts/
+ ├── sections/
+ └── app.jsx
+
+---
+
+# DESIGN RULES
+
+Design style:
+- Modern
+- Premium
+- Minimal
+- Cinematic
+- Awwwards-inspired
+
+Use:
+- smooth transitions
+- parallax effects
+- gradient blur
+- layered layouts
+- large typography
+- animated reveal
+
+Avoid:
+- traditional corporate UI
+- Bootstrap style layouts
+- old-fashioned cards
+- static sections
+
+---
+
+# BACKEND RULES
+
+Laravel handles:
+- API endpoints
+- Sanctum auth
+- database queries
+- admin dashboard
+
+Prefer:
+return response()->json()
+
+Avoid:
+return view()
+
+---
+
+# BLADE RULES
+
+Blade should only:
+- mount React root
+- include Vite assets
+
+Example:
+<div id="app"></div>
+
+Do not create:
+- Blade landing pages
+- Blade animation sections
+- Blade-heavy layouts
+
+---
+
+# PERFORMANCE RULES
+
+Use:
+- lazy loading
+- reusable components
+- optimized animation
+
+Avoid:
+- unnecessary rerenders
+- massive inline styling
+- duplicated UI code
+
+---
+
+# ANIMATION RULES
+
+Prefer:
+- Framer Motion
+- smooth scroll reveal
+- page transition
+- stagger animation
+
+Avoid:
+- jQuery animation
+- CSS-only excessive animation
